@@ -46,7 +46,7 @@ class ApplicationController < Sinatra::Base
     @article = Article.find_by_id(params[:id])
     binding.pry
     @article.delete
-    redirect to "/articles"
+    redirect to "/articles/new"
   end
 
 
