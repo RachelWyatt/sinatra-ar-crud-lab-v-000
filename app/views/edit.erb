@@ -6,16 +6,14 @@
   </head>
   <body>
     <h1>Edit your post:</h1>
-    <form action="/articless/<%= @article.id %>" method="post">
-    
-      <h1> Current name: <%= @article.name %></h1>
-      <h1> Current content: <%= @post.content %></h1>
-    
+    <form class="" action="/articles/<%= @article.id %>" method="post">
       <input id="hidden" type="hidden" name="_method" value="patch">
-      <input type="text" name="title">
-      <input type="text" name="content">
-    
-    
+      <p>
+        Name: <input type="text" name="title" value="<%= @article.title %>">
+      </p>
+      <p>
+        Content: <input type="text" name="content" value="<%= @article.content %>">
+      </p>
       <input type="submit" name="submit" value="submit">
     </form>
   </body>
